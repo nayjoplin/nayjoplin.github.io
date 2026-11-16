@@ -110,3 +110,22 @@ footer{padding:16px 0 29px;display:flex;justify-content:space-between;gap:15px;f
 .expertise h2{font-size:47px}
 .contact h2{font-size:55px}
 }
+
+/* Navegação e descoberta - aprimoramento mobile-first da home */
+.home-nav{position:sticky;top:0;z-index:50;display:flex;justify-content:space-between;align-items:center;min-height:64px;gap:12px;border-bottom:1px solid var(--line);background:rgba(247,243,235,.97);backdrop-filter:blur(12px)}
+.home-brand{font-size:14px;letter-spacing:-.045em;font-weight:800;white-space:nowrap}.home-brand span{margin-left:4px;color:var(--terracotta)}
+.desktop-nav{display:none}.mobile-nav{position:relative}.mobile-nav summary{list-style:none;display:flex;align-items:center;gap:12px;font-size:11px;font-weight:800;cursor:pointer;min-height:44px;padding:0 3px}.mobile-nav summary::-webkit-details-marker{display:none}.mobile-nav summary span{font-size:19px;font-weight:400}
+.mobile-nav-items{position:absolute;right:0;top:44px;width:min(280px,calc(100vw - 34px));background:var(--paper);border:1px solid var(--line);box-shadow:0 18px 26px rgba(16,14,12,.14);display:grid;padding:10px}
+.mobile-nav-items a{font-size:14px;font-weight:600;padding:13px 12px;border-bottom:1px solid var(--line)}.mobile-nav-items a:last-child{border-bottom:0}.mobile-nav-items a[aria-current="page"]{color:var(--terracotta)}
+.hero-actions{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+.home-button{display:inline-flex;align-items:center;justify-content:center;gap:14px;min-height:45px;padding:11px 17px;font-size:12px;font-weight:800;border:1px solid var(--ink);transition:background .15s,color .15s}
+.main-action{background:var(--ink);color:var(--paper)}.main-action:hover{background:var(--terracotta);border-color:var(--terracotta)}.secondary-action{background:transparent}.secondary-action:hover{background:#ece4d8}
+.pathways{padding:26px 0 28px}.pathways-head .eyebrow{font-size:10px;color:var(--terracotta);font-weight:800;letter-spacing:.08em}.pathways-head h2{font:600 33px/.99 'Barlow Condensed',Arial,sans-serif;margin:6px 0}.pathways-head p{font-size:12px;color:var(--muted);margin:5px 0 18px}
+.pathway-grid{display:grid;grid-template-columns:1fr;gap:10px}.pathway{border:1px solid var(--line);padding:16px 17px;display:grid;grid-template-columns:1fr auto;gap:5px;min-height:123px;position:relative;transition:background .15s}
+.pathway:hover{background:#ede5d8}.pathway-no{grid-column:1/-1;font-size:9px;letter-spacing:.09em;color:var(--terracotta);font-weight:800}
+.pathway strong{font-size:17px;font-weight:800;letter-spacing:-.035em;align-self:end}.pathway span:not(.pathway-no){font-size:11px;color:var(--muted);grid-column:1;line-height:1.35}.pathway b{grid-column:2;grid-row:2/4;align-self:center;font-size:23px;color:var(--terracotta);font-weight:400}
+.project-status{font-size:9px;font-weight:800;color:var(--terracotta);letter-spacing:.07em;display:block;margin-bottom:5px}
+.project-foot h3{font-size:14px}
+@media(min-width:600px){.pathway-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}.pathway{min-height:165px}.hero-actions{margin-top:23px}}
+@media(min-width:980px){.home-nav{min-height:72px}.mobile-nav{display:none}.desktop-nav{display:flex;align-items:center;gap:19px}.desktop-nav a{font-size:11px;font-weight:700;padding:12px 0;white-space:nowrap}.desktop-nav a:hover,.desktop-nav a[aria-current="page"]{color:var(--terracotta)}.desktop-nav .nav-contact{padding:11px 16px;border:1px solid var(--ink)}.pathways{padding:31px 0 36px}.pathways-head h2{font-size:39px}.pathway{min-height:160px;padding:18px}.pathway strong{font-size:19px}}
+@media(prefers-reduced-motion:reduce){.project-cover img,.home-button,.pathway{transition:none}}
