@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700;800&display=swap');
-:root{--paper:#f7f3eb;--ink:#171614;--terracotta:#b9694c;--line:#c9c2b7;--muted:#69655f}
+:root{--paper:#f7f5f2;--ink:#171614;--terracotta:#b9694c;--line:#c9c2b7;--muted:#69655f}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:'DM Sans',Arial,sans-serif;-webkit-font-smoothing:antialiased}
