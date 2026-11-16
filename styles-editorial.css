@@ -146,3 +146,20 @@ footer{padding:16px 0 29px;display:flex;justify-content:space-between;gap:15px;f
 .skill-track{grid-column:1/-1;width:100%;height:6px;background:#ded9cf;border-radius:999px;overflow:hidden}
 .skill-fill{display:block;width:var(--level,0%);height:100%;background:var(--terracotta);border-radius:inherit;transition:width .25s ease}
 @media(prefers-reduced-motion:reduce){.skill-fill{transition:none}}
+
+/* Design system único: cantos semiarredondados em toda a home */
+:root{--ui-radius:14px}
+.home-nav,.mobile-nav-items,.pathway,.home-button,.project-cover,.project-cover img,.experience,.stamp,.portrait,.disc,.skill-track,.skill-fill{border-radius:var(--ui-radius)}
+.home-nav{border:1px solid var(--line);padding-inline:12px;margin-block:10px 0}
+.mobile-nav-items{overflow:hidden}
+.home-button{border-radius:var(--ui-radius)}
+.pathway{border-radius:var(--ui-radius)}
+.project-cover{overflow:hidden;border-radius:var(--ui-radius)}
+.project-cover img{border-radius:var(--ui-radius)}
+.experience{border-radius:var(--ui-radius)}
+.portrait{border-radius:var(--ui-radius);object-fit:cover}
+.disc{border-radius:var(--ui-radius)}
+.stamp{border-radius:var(--ui-radius);transform:none}
+.skill-track,.skill-fill{border-radius:var(--ui-radius)}
+.project-cover:focus-within{border-radius:var(--ui-radius)}
+@media(max-width:979px){.home-nav{border-radius:var(--ui-radius)}}
