@@ -28,3 +28,10 @@ html,body{background:var(--global-paper)}
 .form-note{font-size:11px;color:var(--global-muted)}.form-honey{position:absolute;left:-10000px;opacity:0;pointer-events:none}
 @media(min-width:640px){.global-header .global-inner,.global-footer .global-inner{width:min(1310px,calc(100% - 54px))}.hero-media{height:315px;max-height:315px}.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(min-width:980px){.global-header .global-inner,.global-footer .global-inner{width:min(1310px,calc(100% - 76px))}.global-nav{display:flex}.global-menu{display:none}.project-grid,.project-grid.four{grid-template-columns:repeat(4,minmax(0,1fr))}.hero-media{height:350px;max-height:350px}.hero-grid{gap:32px}}
+
+/* Ajustes finais de consistência visual */
+.case-hero img,.case-hero .case-top-image img{max-height:310px;height:310px;object-fit:cover}
+@media(max-width:639px){.case-hero img,.case-hero .case-top-image img{height:225px;max-height:225px}}
+@media(min-width:980px){.case-hero img,.case-hero .case-top-image img{height:310px;max-height:310px}}
+.project-cover,.project-card,.project-card img,.project-cover img{border-radius:var(--global-radius)}
+.project-card img{border-bottom-left-radius:0;border-bottom-right-radius:0}
