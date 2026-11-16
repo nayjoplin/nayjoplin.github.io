@@ -35,3 +35,72 @@ html,body{background:var(--global-paper)}
 @media(min-width:980px){.case-hero img,.case-hero .case-top-image img{height:310px;max-height:310px}}
 .project-cover,.project-card,.project-card img,.project-cover img{border-radius:var(--global-radius)}
 .project-card img{border-bottom-left-radius:0;border-bottom-right-radius:0}
+
+/* Títulos: mesmo sistema dos títulos editoriais de seção da Home,
+   não replicar o logotipo, o PORTFÓLIO nem o nome pessoal */
+.page-hero .hero-heading,.case-hero h1,.case-hero .case-top h1{
+  font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
+  font-weight:600;font-size:clamp(43px,9.4vw,66px);line-height:.98;
+  letter-spacing:-.025em;text-transform:uppercase;overflow-wrap:normal;
+  margin:10px 0 16px;
+}
+.page-hero .hero-heading.long{font-size:clamp(41px,8.3vw,61px)}
+.section-head h2,.section-head .section-title,
+.expertise h2,.background h2,.contact h2,
+.case-copy h2,.case-side h2,.section h2,.callout h2,.cta-band h2,
+.contact-form h2,.feature-panel h2{
+  font-family:'Barlow Condensed','Arial Narrow',Arial,sans-serif;
+  font-size:clamp(30px,6.8vw,45px);font-weight:600;
+  line-height:.98;letter-spacing:-.02em;
+}
+.case-copy h3,.project-body h3,.project-foot h3,.area-card h3,
+.timeline-card strong,.experience h3,.feature strong{
+  font-family:'DM Sans',Arial,sans-serif;font-weight:800;
+  letter-spacing:-.025em;line-height:1.25;
+}
+.case-hero .case-top h1,.case-hero h1{max-width:100%;font-size:clamp(41px,8.2vw,63px)}
+/* Botões: primeiro sempre preenchido, os adjacentes apenas contorno.
+   Hover terroso com contraste adequado */
+.btn,.btn.primary,.home-button,.home-button.main-action,
+.global-button,.callout .btn,.cta-band .btn{
+  background:var(--global-ink);color:#fff;border:1px solid var(--global-ink);
+  border-radius:var(--global-radius);box-shadow:none;
+  transition:background-color .18s,border-color .18s,color .18s;
+}
+.hero-actions>.btn:not(:first-child),.hero-actions>.home-button:not(:first-child),
+.actions>.btn:not(:first-child),.callout .btn:nth-child(n+2),
+.cta-band .actions>.btn:not(:first-child),
+.contact-form .btn.secondary,.home-button.secondary-action{
+  background:transparent;color:var(--global-ink);border:1px solid var(--global-ink);
+}
+.btn:hover,.btn.primary:hover,.home-button:hover,.home-button.main-action:hover,
+.global-button:hover,.callout .btn:hover,.cta-band .btn:hover,
+.hero-actions>.btn:not(:first-child):hover,.actions>.btn:not(:first-child):hover,
+.home-button.secondary-action:hover{
+  background:#b9694c;color:#fff;border-color:#b9694c;filter:none;
+}
+@media(min-width:980px){
+ .page-hero .hero-heading{font-size:clamp(51px,5.5vw,73px)}
+ .page-hero .hero-heading.long{font-size:clamp(49px,5.2vw,69px)}
+ .case-hero h1,.case-hero .case-top h1{font-size:clamp(48px,5vw,69px)}
+}
+/* Contato: formulário com contexto e diálogo de retorno */
+.contact-form{position:relative;gap:15px}
+.contact-form .form-heading{font-family:'Barlow Condensed',Arial,sans-serif;font-size:30px;line-height:1}
+.contact-form .global-button:disabled{opacity:.65;cursor:progress}
+.form-feedback{min-height:18px;color:#9c3926;font-size:12px;font-weight:700}
+.contact-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:22px;align-items:start}
+.contact-aside{display:grid;gap:12px}
+.contact-aside .area-card{border:1px solid var(--global-line);border-radius:14px;padding:20px}
+.contact-aside .area-card h3{margin:8px 0 8px}
+.contact-direct{display:grid;gap:10px}
+.contact-direct a{padding:15px;border:1px solid var(--global-line);border-radius:14px;display:flex;justify-content:space-between;gap:12px;font-weight:750;font-size:13px}
+.contact-direct a:hover{border-color:#b9694c;color:#b9694c}
+.contact-dialog{border:1px solid var(--global-line);border-radius:14px;max-width:min(445px,calc(100vw - 32px));width:100%;padding:30px;background:#f7f5f2;color:#171614;box-shadow:0 25px 80px #0003}
+.contact-dialog::backdrop{background:rgba(23,22,20,.53)}
+.contact-dialog .dialog-symbol{font-size:23px;color:#b9694c}
+.contact-dialog h2{font:600 38px/.99 'Barlow Condensed',Arial,sans-serif;margin:8px 0 12px}
+.contact-dialog p{font-size:13px;line-height:1.65;color:#69655f}
+.contact-dialog button{cursor:pointer;min-height:43px;padding:10px 19px;border-radius:14px;background:#171614;border:1px solid #171614;color:#fff;font-weight:800}
+.contact-dialog button:hover{background:#b9694c;border-color:#b9694c}
+@media(min-width:780px){.contact-layout{grid-template-columns:minmax(0,1.2fr) minmax(290px,.8fr);gap:28px}}
