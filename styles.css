@@ -9,3 +9,13 @@ body:before{background:transparent}
 .card,.stats-grid,.feature-panel,.process-step,.fact,.smart-item,.contact-intro,.btn:not(.primary),.filter-btn:not(.active){background:var(--site-panel)}
 .cta-band{background:#f0eade}
 @media(max-width:760px){.nav-links,.menu-toggle{background:var(--site-panel)}}
+
+/* Cantos consistentes: páginas internas e cases */
+:root{--ui-radius:14px;--radius:var(--ui-radius)}
+.nav,.nav-inner,.nav-links,.nav-cta,.btn,.filter-btn,.card,.project-card,.feature-panel,.portrait-shell,.code-card,.chip,.cta-band,.stats-grid,.stat,.process-step,.fact,.smart-item,.contact-intro,.contact-panel,.media-tile,.result-card,.menu-toggle,.case-facts,.skill-column,.feature-icon{border-radius:var(--ui-radius)}
+.card img,.project-card img,.media-tile img,.portrait-shell img{border-radius:var(--ui-radius) var(--ui-radius) 0 0}
+.nav-links,.menu-toggle{border-radius:var(--ui-radius)}
+.projects-six .project-card,.grid .project-card{overflow:hidden}
+.projects-six .project-card img,.grid .project-card img{width:100%;display:block;object-fit:cover}
+button,input,select,textarea{border-radius:var(--ui-radius)}
+@media(max-width:760px){.nav-links{border-radius:var(--ui-radius);overflow:hidden}}
