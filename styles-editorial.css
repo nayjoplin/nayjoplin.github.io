@@ -129,3 +129,20 @@ footer{padding:16px 0 29px;display:flex;justify-content:space-between;gap:15px;f
 @media(min-width:600px){.pathway-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:11px}.pathway{min-height:165px}.hero-actions{margin-top:23px}}
 @media(min-width:980px){.home-nav{min-height:72px}.mobile-nav{display:none}.desktop-nav{display:flex;align-items:center;gap:19px}.desktop-nav a{font-size:11px;font-weight:700;padding:12px 0;white-space:nowrap}.desktop-nav a:hover,.desktop-nav a[aria-current="page"]{color:var(--terracotta)}.desktop-nav .nav-contact{padding:11px 16px;border:1px solid var(--ink)}.pathways{padding:31px 0 36px}.pathways-head h2{font-size:39px}.pathway{min-height:160px;padding:18px}.pathway strong{font-size:19px}}
 @media(prefers-reduced-motion:reduce){.project-cover img,.home-button,.pathway{transition:none}}
+
+/* Covers: layout estável, sem sobreposição e com bordas suaves */
+.projects{align-items:start}
+.project{min-width:0;position:relative;isolation:isolate}
+.project-cover{display:block;position:relative;width:100%;aspect-ratio:4/3;overflow:hidden;border-radius:13px;background:#e9e5dc;border:1px solid rgba(40,36,31,.10);isolation:isolate}
+.project-cover img{position:absolute;inset:0;width:100%;height:100%;max-width:none;display:block;object-fit:cover;object-position:center center;border-radius:inherit;transform:none}
+.project:hover .project-cover img{transform:scale(1.025)}
+.project-foot{min-width:0}.project-foot>div{min-width:0}.project-foot h3,.project-foot p{overflow-wrap:anywhere}
+@media(min-width:600px){.project-cover{aspect-ratio:4/3;border-radius:14px}}
+@media(min-width:980px){.project-cover{aspect-ratio:1.15;border-radius:15px}}
+/* Escala real: a barra usa exatamente o percentual de --level.
+   Valores não informados permanecem visivelmente sem avaliação. */
+.skill{grid-template-columns:minmax(0,1fr) auto;gap:7px 12px;align-items:center}
+.skill-label{min-width:0}.skill-value{font-size:10px;color:var(--muted);font-weight:700;white-space:nowrap}
+.skill-track{grid-column:1/-1;width:100%;height:6px;background:#ded9cf;border-radius:999px;overflow:hidden}
+.skill-fill{display:block;width:var(--level,0%);height:100%;background:var(--terracotta);border-radius:inherit;transition:width .25s ease}
+@media(prefers-reduced-motion:reduce){.skill-fill{transition:none}}
