@@ -198,3 +198,25 @@ footer{padding:16px 0 29px;display:flex;justify-content:space-between;gap:15px;f
  .hero .portrait-area{height:485px;margin-top:-55px}
  .hero .portrait{height:475px;max-width:95%;width:auto}
 }
+
+/* A exceção intencional ao radius dos cards: elementos circulares da Home */
+.hero .portrait-area .disc{
+  width:min(78vw,440px);height:auto;aspect-ratio:1/1;
+  border-radius:50%!important;position:absolute;left:50%;bottom:0;
+  transform:translateX(-50%);background:var(--terracotta);z-index:0;
+}
+.hero .portrait-area .stamp{
+  width:94px;height:94px;aspect-ratio:1/1;
+  border-radius:50%!important;transform:rotate(11deg);
+  border:1px dashed var(--terracotta);
+  background:var(--paper);z-index:5;overflow:hidden;
+  display:flex;align-items:center;justify-content:center;text-align:center;
+  font-size:8px;line-height:1.25;padding:9px;
+}
+.hero .portrait-area .portrait{
+  border-radius:0!important;object-fit:contain;object-position:center bottom;
+  position:relative;z-index:3;image-rendering:auto;
+}
+@media(max-width:599px){.hero .portrait-area .disc{width:min(78vw,290px)}.hero .portrait-area .stamp{width:82px;height:82px;top:12%;right:1%}}
+@media(min-width:600px){.hero .portrait-area .disc{width:325px}.hero .portrait-area .stamp{width:94px;height:94px}}
+@media(min-width:980px){.hero .portrait-area .disc{width:440px}.hero .portrait-area .stamp{width:109px;height:109px;top:33%;right:8%;font-size:9px}}
