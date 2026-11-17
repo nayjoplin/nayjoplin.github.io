@@ -135,3 +135,13 @@ html,body{background:var(--global-paper)}
 .about-cta blockquote{margin:0;max-width:870px;font:600 clamp(25px,6vw,46px)/1.18 'Barlow Condensed',Arial,sans-serif;letter-spacing:-.02em}
 @media(min-width:620px){.about-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.about-languages{grid-template-columns:repeat(4,minmax(0,1fr))}.about-highlights>div{padding:21px}}
 @media(min-width:980px){.about-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.about-experience{grid-template-columns:repeat(3,minmax(0,1fr))}.about-intro{grid-template-columns:1fr 1fr;align-items:center;gap:35px}}
+
+/* Retrato original recortado com fundo transparente na página Sobre */
+.about-portrait{
+ background:transparent!important;
+ object-fit:contain!important;
+ object-position:center bottom!important;
+ max-height:350px;
+}
+@media(max-width:639px){.about-portrait{height:300px;max-height:300px}}
+@media(min-width:980px){.about-portrait{height:350px;max-height:350px}}
