@@ -104,3 +104,11 @@ html,body{background:var(--global-paper)}
 .contact-dialog button{cursor:pointer;min-height:43px;padding:10px 19px;border-radius:14px;background:#171614;border:1px solid #171614;color:#fff;font-weight:800}
 .contact-dialog button:hover{background:#b9694c;border-color:#b9694c}
 @media(min-width:780px){.contact-layout{grid-template-columns:minmax(0,1.2fr) minmax(290px,.8fr);gap:28px}}
+
+/* Popup de envio: linguagem editorial orgânica */
+.contact-dialog{padding:28px 26px 25px;text-align:left;background:#f7f5f2;border-radius:14px;border:1px solid #d3ccc4;max-width:min(460px,calc(100vw - 30px))}
+.contact-dialog .dialog-symbol{display:inline-flex;align-items:center;justify-content:center;font-size:35px;color:#b9694c;margin-bottom:5px}
+.contact-dialog h2{font:600 clamp(45px,10vw,63px)/.96 'Barlow Condensed',Arial,sans-serif;color:#b9694c;letter-spacing:.005em;margin:4px 0 18px}
+.contact-dialog p{font:400 14px/1.55 'DM Sans',Arial,sans-serif;color:#171614;margin:0 0 12px}
+.contact-dialog .dialog-highlight{font-size:18px;font-weight:800;letter-spacing:-.025em;line-height:1.25;margin-bottom:15px}
+.contact-dialog button{margin-top:12px;min-width:120px}
