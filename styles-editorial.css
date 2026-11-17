@@ -163,3 +163,38 @@ footer{padding:16px 0 29px;display:flex;justify-content:space-between;gap:15px;f
 .skill-track,.skill-fill{border-radius:var(--ui-radius)}
 .project-cover:focus-within{border-radius:var(--ui-radius)}
 @media(max-width:979px){.home-nav{border-radius:var(--ui-radius)}}
+
+/* Retrato enviado: recorte transparente levemente sobre o título, sem alterar o restante da Home */
+.hero .display{
+  position:relative;z-index:1;
+  letter-spacing:.025em;
+  font-size:clamp(45px,15.2vw,103px);
+  max-width:100%;overflow:visible;
+}
+.hero .hero-inner{position:relative;z-index:2}
+.hero .portrait-area{
+  z-index:3;
+  overflow:visible;
+  margin-top:-21px;
+  height:320px;
+}
+.hero .portrait{
+  width:auto;height:325px;max-width:min(85%,310px);
+  object-fit:contain;object-position:center bottom;
+  border-radius:0;background:transparent;
+  display:block;filter:none;
+}
+.hero .disc{bottom:4px}
+.hero .stamp{z-index:4}
+@media(min-width:600px){
+ .hero .display{font-size:clamp(84px,15.4vw,172px);letter-spacing:.025em}
+ .hero .hero-inner{margin-top:-43px}
+ .hero .portrait-area{height:385px;margin-top:-50px}
+ .hero .portrait{height:390px;max-width:95%;width:auto}
+}
+@media(min-width:980px){
+ .hero .display{font-size:clamp(150px,15.5vw,232px);letter-spacing:.025em}
+ .hero .hero-inner{margin-top:-63px}
+ .hero .portrait-area{height:485px;margin-top:-55px}
+ .hero .portrait{height:475px;max-width:95%;width:auto}
+}
