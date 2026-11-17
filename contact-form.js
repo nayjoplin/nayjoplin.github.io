@@ -32,13 +32,6 @@
     button.textContent = 'Enviando mensagem...';
 
     const payload = Object.fromEntries(new FormData(form).entries());
-    if (payload._honey) {
-      showError('Não foi possível enviar a mensagem. Confira os campos e tente novamente.');
-      button.disabled = false;
-      button.textContent = normalLabel;
-      return;
-    }
-
     try {
       const response = await fetch('https://formsubmit.co/ajax/nayjoplin96@gmail.com', {
         method: 'POST',
