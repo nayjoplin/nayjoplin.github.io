@@ -41,8 +41,8 @@
         },
         body: JSON.stringify(payload)
       });
-      const data = await response.json();
-      const success = data?.success === true || data?.success === 'true';
+      const data = await response.json().catch(() => ({}));
+      const success = data?.success === true || data?.success === 'true' || data?.success === 'True';
 
       if (!response.ok || !success) {
         const serverMessage = typeof data?.message === 'string' ? data.message : '';
